@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.resume-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #ecf0f1;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    border-bottom: 4px solid transparent;
+    background-clip: padding-box;
+    border-image: linear-gradient(to right, #3498db, #2ecc71) 1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #ecf0f1, #bdc3c7);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.contact {
+    margin: 15px 0 10px;
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #ecf0f1;
+}
+
+.contact a {
+    color: #2ecc71;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact a:hover {
+    color: #27ae60;
+    text-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+}
+
+section {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideIn 0.5s ease-out;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+section h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    font-weight: 700;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    position: relative;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+.item {
+    padding: 15px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.item:hover {
+    background: #e8f4f8;
+    border-radius: 5px;
+    transform: scale(1.02);
+}
+
+.item h3 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.item .date {
+    font-style: italic;
+    color: #7f8c8d;
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.skills ul, .interests ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills li, .interests li {
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills li:hover, .interests li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #ecf0f1;
+    border-radius: 0 0 12px 12px;
+    font-size: 0.9em;
+    font-weight: 300;
+    border-top: 4px solid transparent;
+    background-clip: padding-box;
+    border-image: linear-gradient(to right, #3498db, #2ecc71) 1;
+}
+
+footer .contact {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .resume-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    section h2 {
+        font-size: 1.6em;
+    }
+
+    .skills li, .interests li {
+        font-size: 0.8em;
+    }
+
+    .contact {
+        font-size: 1em;
+    }
+}
